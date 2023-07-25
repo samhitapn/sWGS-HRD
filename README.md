@@ -68,5 +68,15 @@ The above job will call the runJobs_sWGS_HRD.sh file which does the following ta
 
     These jobs first use samtools1.5 to split the genome into individual chromosomes and then for each chromosome, uses bcftools1.15 to genotype at the desired locations as provided in the common SNP file. 
     
-### RUN THE HRD-ANALYSIS
+### Run the HRD-Analysis
+Once all the above jobs are run and the results are in the desired folders, use the following to run the HRD-Analysis, update the values in <> as per definitions described in teh previous sections:
+
+    source activate /ifs/data/research/projects/ltg/software/miniconda3/envs/R.3.6.0/
+
+    cd /ifs/data/research/projects/Samhita/srcFinal/
+
+    Rscript main_HRD.R \
+    --path <OUTPUT_DIRECTORY>/<COHORT_NAME> \
+    --sampleList <SAMPLE_LIST>
+    
 
