@@ -36,8 +36,9 @@ In the file /ifs/data/research/projects/Samhita/srcFinal/hrd_sWGS.job, modify th
     <COHORT_NAME> : Provide the name of the cohort 
     <BAMPATHs_FILE> : Provide the path to the file that contains the list of all BAM files to be used in the run
     <SAMPLE_LIST> : Provide the path to the file that contains the list of sample names and their corresponding pathological TC if available. 
-The sample names should match the sample names as in the BAM files. 
-Example File as below:
+    The sample names should match the sample names as in the BAM files. 
+    
+    Example File as below:
 
     SAMPLE     TC
     Sample1    90
