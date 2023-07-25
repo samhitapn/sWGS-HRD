@@ -117,3 +117,8 @@ Once all the above jobs are run and the results are in the desired folders, use 
 
     Lines :
         1) #326 (Path to the additional chrS windows for a dummy chrX in the ratio plots)
+
+    File : ichorCNA.sh
+
+    Lines :
+        1) #33 (Path to the .rds own reference file required for generating panel of Normals for ichorCNA)
