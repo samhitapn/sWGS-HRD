@@ -120,7 +120,7 @@ The above code is also in runHRDAnalysis.sh
         
     File : Functions_HRD.R
     Lines :
-        1) #326 (Path to the additional chrS windows for a dummy chrX in the ratio plots)
+        1) #326 (Path to the additional chrX windows for a dummy chrX in the ratio plots)
 
 ### Script file flow
 
