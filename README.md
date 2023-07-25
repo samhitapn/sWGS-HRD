@@ -20,7 +20,8 @@ Purpose: Pipeline overview for sWGS – HRD runs
 9. GenomeInfoDb
 10. heatmap3
 
-Note: 
+(Note:
+
 a) To run directly using in-house softwares, all the above softwares are available in:
 
     /ifs/data/research/projects/ltg/software/
@@ -28,8 +29,9 @@ a) To run directly using in-house softwares, all the above softwares are availab
 b) The R version and the necessary pacakges can all be accessed as part of a miniconda environment which can be accessed when required using: 
 
     source activate /ifs/data/research/projects/ltg/software/miniconda3/envs/R.3.6.0/
+)
 
-### Launch the CNA and Genotyping jobs - automatically
+### Launch the ichorCNA and Genotyping jobs - automatically
 In the file /ifs/data/research/projects/Samhita/srcFinal/hrd_sWGS.job, modify the necessary parameters:
 
     <OUTPUT_DIRECTORY> : Provide the directory where the results need to be saved
@@ -51,7 +53,7 @@ Launch the following job file after modifying the necessary input parameters:
 
     sbatch "/ifs/data/research/projects/Samhita/srcFinal/hrd_sWGS.job"
 
-### Launch the CNA and Genotyping jobs - manually
+### Launch the ichorCNA and Genotyping jobs - manually
 The above job will call the runJobs_sWGS_CNA_Genotyping.sh file which does the following tasks:
 (Note : The tasks in this file, can also be chosen to run manually)
 
@@ -59,7 +61,7 @@ The above job will call the runJobs_sWGS_CNA_Genotyping.sh file which does the f
     ${2} : <COHORT_NAME>
     ${3} : <BAMPATHs_FILE>
     ${4} : <SAMPLE_LIST>
-    (Refer Section "Launch the CNA and Genotyping jobs - automatically" for definition of these parameters)
+    (Refer Section "Launch the ichorCNA and Genotyping jobs - automatically" for definition of these parameters)
     
     TASK1 : CREATE ALL THE NECESSARY DIRECTORIES/ SUB-DIRECTORIES
 
