@@ -20,8 +20,14 @@ Purpose: Pipeline overview for sWGS – HRD runs
 9. GenomeInfoDb
 10. heatmap3
 
-Note : To run directly using in-house softwares, all the above softwares and r packages are installed in 
+Note: 
+a) To run directly using in-house softwares, all the above softwares are available in:
+
     "/ifs/data/research/projects/ltg/software/"
+    
+b) The R version and the necessary pacakges can all be accessed as part of a miniconda environment which can be accessed when required using: 
+
+    source activate /ifs/data/research/projects/ltg/software/miniconda3/envs/R.3.6.0/
 
 ### Launch the CNA and Genotyping jobs - automatically
 In the file /ifs/data/research/projects/Samhita/srcFinal/hrd_sWGS.job, modify the necessary parameters:
