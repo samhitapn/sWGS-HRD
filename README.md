@@ -46,12 +46,13 @@ Launch the following job file after modifying the necessary input paths:
 The above job will call the runJobs_sWGS_CNA_Genotyping.sh file which does the following tasks:
 (Note : The tasks in this file, can also be chosen to run manually)
 
-    TASK1 : CREATE ALL THE NECESSARY DIRECTORIES/ SUB-DIRECTORIES
     ${1} : <OUTPUT_DIRECTORY>
     ${2} : <COHORT_NAME>
     ${3} : <BAMPATHs_FILE>
     ${4} : <SAMPLE_LIST>
     (Refer Section "Launch the CNA and Genotyping jobs - automatically" for definition of these parameters)
+    
+    TASK1 : CREATE ALL THE NECESSARY DIRECTORIES/ SUB-DIRECTORIES
 
     TASK 2 : CREATES ALL THE JOB FILES NECESASRY FOR ICHORCNA RUNS USING THE BAM PATH FILES PROVIDED
     These jobs use the hmm-utils and the ichorCNA tools to run the ichorCNA and generate results based on different parameters. These jobs additionally call the /ifs/data/research/projects/Samhita/srcFinal/ichorCNA.sh script to run ichorCNA. The main parameters to be noted are : 
