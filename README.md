@@ -21,5 +21,11 @@ Purpose: Pipeline overview for sWGS – HRD runs
 10. heatmap3
 
 Note : To run directly using in-house softwares, all the above softwares and r packages are installed in 
-  "/ifs/data/research/projects/ltg/software"
+    "/ifs/data/research/projects/ltg/software"
+
+### Running the pipeline
+Launch the following job file after modifying the necessary input paths:
+   /ifs/data/research/projects/ltg/software/sWGS_HRD/hrd_sWGS.job
+
+
   
