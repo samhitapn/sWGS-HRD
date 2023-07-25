@@ -103,7 +103,15 @@ The above code is also in runHRDAnalysis.sh
     Lines :
         1) #24 (Path to template_ichorCNA.job)
         2) #46 (Path to template_splitChr_mpileup_hg38.job)
-       
+
+    File : template_ichorCNA.job
+    Lines :
+        1) 26 (Path to the src folder to access the ichorCNA.sh file)
+        
+    File : ichorCNA.sh
+    Lines :
+        1) #33 (Path to the .rds own reference file required for generating panel of Normals for ichorCNA)
+    
     File : main_HRD.R
     Lines : 
         1) #9 (Path to the HRD Functions R file) 
@@ -113,10 +121,6 @@ The above code is also in runHRDAnalysis.sh
     File : Functions_HRD.R
     Lines :
         1) #326 (Path to the additional chrS windows for a dummy chrX in the ratio plots)
-
-    File : ichorCNA.sh
-    Lines :
-        1) #33 (Path to the .rds own reference file required for generating panel of Normals for ichorCNA)
 
 ### Script file flow
 
