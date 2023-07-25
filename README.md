@@ -35,7 +35,9 @@ In the file /ifs/data/research/projects/Samhita/srcFinal/hrd_sWGS.job, modify th
     <OUTPUT_DIRECTORY> : Provide the directory where the results need to be saved
     <COHORT_NAME> : Provide the name of the cohort 
     <BAMPATHs_FILE> : Provide the path to the file that contains the list of all BAM files to be used in the run
-    <SAMPLE_LIST> : Provide the path to the file that contains the list of sample names and their corresponding pathological TC if available. The sample names should match the sample names as in the BAM files. Example File as below:
+    <SAMPLE_LIST> : Provide the path to the file that contains the list of sample names and their corresponding pathological TC if available. 
+The sample names should match the sample names as in the BAM files. 
+Example File as below:
 
     SAMPLE     TC
     Sample1    90
@@ -44,7 +46,7 @@ In the file /ifs/data/research/projects/Samhita/srcFinal/hrd_sWGS.job, modify th
     
     In addition modify the output and error paths of the job file.
 
-Launch the following job file after modifying the necessary input paths:
+Launch the following job file after modifying the necessary input parameters:
 
     sbatch "/ifs/data/research/projects/Samhita/srcFinal/hrd_sWGS.job"
 
