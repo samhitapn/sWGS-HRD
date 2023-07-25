@@ -43,7 +43,7 @@ Launch the following job file after modifying the necessary input paths:
     sbatch "/ifs/data/research/projects/Samhita/srcFinal/hrd_sWGS.job"
 
 ### Launch the CNA and Genotyping jobs - manually
-The above job will call the runJobs_sWGS_HRD.sh file which does the following tasks:
+The above job will call the runJobs_sWGS_CNA_Genotyping.sh file which does the following tasks:
 (Note : The tasks in this file, can also be chosen to run manually)
 
     TASK1 : CREATE ALL THE NECESSARY DIRECTORIES/ SUB-DIRECTORIES
@@ -72,7 +72,9 @@ Once all the above jobs are run and the results are in the desired folders, use 
     --sampleList <SAMPLE_LIST>
 
     source deactivate
-    
+
+The above code is also in runHRDAnalysis.sh
+
 ### Explanation of the Directories structure
 
     1. ichorCNA : All the results from all the ichorCNA runs
@@ -115,3 +117,7 @@ Once all the above jobs are run and the results are in the desired folders, use 
     File : ichorCNA.sh
     Lines :
         1) #33 (Path to the .rds own reference file required for generating panel of Normals for ichorCNA)
+
+### Script file flow
+
+    hrd_sWGS.job => runJobs_sWGS_CNA_Genotyping.sh => runHRDAnalysis.sh
