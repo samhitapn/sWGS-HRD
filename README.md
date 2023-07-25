@@ -27,15 +27,11 @@ Note : To run directly using in-house softwares, all the above softwares and r p
 In the file /ifs/data/research/projects/Samhita/srcFinal/hrd_sWGS.job, modify the necessary parameters:
 
     <OUTPUT_DIRECTORY> : Provide the directory where the results need to be saved
-    
     <COHORT_NAME> : Provide the name of the cohort 
-    
     <BAMPATHs_FILE> : Provide the path to the file that contains the list of all BAM files to be used in the run
-    
     <SAMPLE_LIST> : Provide the path to the file that contains the list of sample names and their corresponding pathological TC if available. The sample names should match the sample names as in the BAM files.
-
     In addition modify the output and error paths of the job file.
-    
+
 Launch the following job file after modifying the necessary input paths:
 
     sbatch "/ifs/data/research/projects/Samhita/srcFinal/hrd_sWGS.job"
@@ -46,15 +42,10 @@ The above job will call the runJobs_sWGS_HRD.sh file which does the following ta
 
     TASK1 : CREATE ALL THE NECESSARY DIRECTORIES/ SUB-DIRECTORIES
     ${1} : <OUTPUT_DIRECTORY>
-    
     ${2} : <COHORT_NAME>
-
     ${3} : <BAMPATHs_FILE>
-
     ${4} : <SAMPLE_LIST>
-
     (Refer Section "Launch the CNA and Genotyping jobs - automatically" for definition of these parameters)
-
 
     TASK 2 : CREATES ALL THE JOB FILES NECESASRY FOR ICHORCNA RUNS USING THE BAM PATH FILES PROVIDED
     These jobs use the hmm-utils and the ichorCNA tools to run the ichorCNA and generate results based on different parameters. These jobs additionally call the /ifs/data/research/projects/Samhita/srcFinal/ichorCNA.sh script to run ichorCNA. The main parameters to be noted are : 
@@ -70,7 +61,6 @@ Once all the above jobs are run and the results are in the desired folders, use 
     source activate /ifs/data/research/projects/ltg/software/miniconda3/envs/R.3.6.0/
 
     cd /ifs/data/research/projects/Samhita/srcFinal/
-
     Rscript main_HRD.R \
     --path <OUTPUT_DIRECTORY>/<COHORT_NAME> \
     --sampleList <SAMPLE_LIST>
