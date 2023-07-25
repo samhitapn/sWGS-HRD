@@ -94,15 +94,12 @@ Once all the above jobs are run and the results are in the desired folders, use 
     File : runJobs_sWGS_HRD.R
     Lines :
         1) #24 (Path to template_ichorCNA.job)
-
         2) #46 (Path to template_splitChr_mpileup_hg38.job)
-        
+       
     File : main_HRD.R
     Lines : 
         1) #9 (Path to the HRD Functions R file) 
-        
         2) #27 (Path to bins for LOH calculaltion)
-        
         3) #32 (Path to the reference LOH cohort)
         
     File : Functions_HRD.R
