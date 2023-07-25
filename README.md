@@ -69,7 +69,7 @@ The above job will call the runJobs_sWGS_HRD.sh file which does the following ta
     These jobs first use samtools1.5 to split the genome into individual chromosomes and then for each chromosome, uses bcftools1.15 to genotype at the desired locations as provided in the common SNP file. 
     
 ### Run the HRD-Analysis
-Once all the above jobs are run and the results are in the desired folders, use the following to run the HRD-Analysis, update the values in <> as per definitions described in teh previous sections:
+Once all the above jobs are run and the results are in the desired folders, use the following to run the HRD-Analysis, update the values within <> as per definitions described in teh previous sections:
 
     source activate /ifs/data/research/projects/ltg/software/miniconda3/envs/R.3.6.0/
 
@@ -79,4 +79,26 @@ Once all the above jobs are run and the results are in the desired folders, use 
     --path <OUTPUT_DIRECTORY>/<COHORT_NAME> \
     --sampleList <SAMPLE_LIST>
     
+### Explanation of the Directories structure
+
+    1. ichorCNA : All the results from all the ichorCNA runs
+    
+    2. Genotyping : Stores the results generated from bcftools parsing; there will be individual .txt files per sample per chromosome
+
+    3. lohVAF : Stores the processed genotype results with VAF calculated, that will be used further; there will be individual .txt file per sample
+
+    4. lohRatios : Calculated ratios per sample per 10Mb bin with an overlap of 5Mb is created; there will be individual .txt file per sample
+
+    5. hrdResults : All the calcualted HRD metrics : LST, LOH, tAI based on each ichorCNA ploidy run along with ichorCNA reported ploidy and purity at each run and additional parameters are reported. There will be 3 files per sample, one named <SAMPLE>_selectedResults.txt which will have the above output for only the ichorCNA selected result - per ploidy mode run; the other named <SAMPLE>_allResults.txt will have all the above output for all different combination of ichorCAN runs.
+
+    6. hrpPlots : There will be again 2 files per sample. One named <SAMPLE>_selectedSolutions.pdf will have 4 genome wide CNA plots along with the LOH ratio plot. One named <SAMPLE>_allSOlutions.pdf will have 18 differnt genome wide CNA plots and one ratio plot (each plot per page) summarising/ displaying all the HRD results.
+
+    7. jobFiles : Directory to store all the job files created for ichorCNA and genotyping runs
+
+    8. err and out : directories to store .err and .out files for each of the runs
+
+    9. temp : To temporarily store the per chromosome bam and bai files. This directory should be empty at the end of the genotyping.
+
+(7,8 and 9 directories can be deleted once the run is complete)
+
 
