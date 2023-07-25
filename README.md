@@ -40,12 +40,12 @@ In the file /ifs/data/research/projects/Samhita/srcFinal/hrd_sWGS.job, modify th
     <SAMPLE_LIST> : Provide the path to the file that contains the list of sample names and their corresponding pathological TC if available. 
     The sample names should match the sample names as in the BAM files. 
     
-    Example File as below:
+    Example File as below (Without header, tab separated. If no Pathology TC is available, please provide as NA):
 
-    SAMPLE     TC
     Sample1    90
     Sample2    56
     Sample3    10
+    Sample4    NA
     
     In addition modify the output and error paths of the job file.
 
