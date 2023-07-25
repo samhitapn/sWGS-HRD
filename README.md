@@ -78,6 +78,8 @@ Once all the above jobs are run and the results are in the desired folders, use 
     Rscript main_HRD.R \
     --path <OUTPUT_DIRECTORY>/<COHORT_NAME> \
     --sampleList <SAMPLE_LIST>
+
+    source deactivate
     
 ### Explanation of the Directories structure
 
