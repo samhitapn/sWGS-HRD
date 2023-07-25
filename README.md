@@ -89,8 +89,14 @@ Once all the above jobs are run and the results are in the desired folders, use 
 
 (7,8 and 9 directories can be deleted once the run is complete)
 
-### Hard coded paths to change manually
+### Hard coded paths that may need to be changed manually
 
+    File : runJobs_sWGS_HRD.R
+    Lines :
+        1) #24 (Path to template_ichorCNA.job)
+
+        2) #46 (Path to template_splitChr_mpileup_hg38.job)
+        
     File : main_HRD.R
     Lines : 
         1) #9 (Path to the HRD Functions R file) 
@@ -99,7 +105,6 @@ Once all the above jobs are run and the results are in the desired folders, use 
         
         3) #32 (Path to the reference LOH cohort)
         
-
     File : Functions_HRD.R
     Lines :
         1) #326 (Path to the additional chrS windows for a dummy chrX in the ratio plots)
