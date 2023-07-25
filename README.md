@@ -23,7 +23,7 @@ Purpose: Pipeline overview for sWGS – HRD runs
 Note: 
 a) To run directly using in-house softwares, all the above softwares are available in:
 
-    "/ifs/data/research/projects/ltg/software/"
+    /ifs/data/research/projects/ltg/software/
     
 b) The R version and the necessary pacakges can all be accessed as part of a miniconda environment which can be accessed when required using: 
 
