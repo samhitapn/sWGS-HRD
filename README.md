@@ -104,7 +104,6 @@ Once all the above jobs are run and the results are in the desired folders, use 
 ### Hard coded paths to change manually
 
     File : main_HRD.R
-    
     Lines : 
         1) #9 (Path to the HRD Functions R file) 
         
@@ -114,11 +113,9 @@ Once all the above jobs are run and the results are in the desired folders, use 
         
 
     File : Functions_HRD.R
-
     Lines :
         1) #326 (Path to the additional chrS windows for a dummy chrX in the ratio plots)
 
     File : ichorCNA.sh
-
     Lines :
         1) #33 (Path to the .rds own reference file required for generating panel of Normals for ichorCNA)
