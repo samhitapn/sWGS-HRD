@@ -101,4 +101,19 @@ Once all the above jobs are run and the results are in the desired folders, use 
 
 (7,8 and 9 directories can be deleted once the run is complete)
 
+### Hard coded paths to change manually
 
+    File : main_HRD.R
+    
+    Lines : 
+        1) #9 (Path to the HRD Functions R file) 
+        
+        2) #27 (Path to bins for LOH calculaltion)
+        
+        3) #32 (Path to the reference LOH cohort)
+        
+
+    File : Functions_HRD.R
+
+    Lines :
+        1) #326 (Path to the additional chrS windows for a dummy chrX in the ratio plots)
