@@ -18,7 +18,6 @@ Purpose: Pipeline overview for sWGS – HRD runs
 7. HMMcopy
 8. GenomicRanges
 9. GenomeInfoDb
-10. heatmap3
 
 (Note:
 
