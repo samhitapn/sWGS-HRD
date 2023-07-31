@@ -1,7 +1,3 @@
-![tAI_Schematic](https://github.com/samhitapn/sWGS-HRD/assets/26872279/a2e7f878-b210-40b7-977e-15cd91fcfe0c)
-![LST_tAI_Flow_Functions](https://github.com/samhitapn/sWGS-HRD/assets/26872279/b7ecee0d-66ac-4f3b-ab75-342f8dbd1cf9)
-![LST_Schematic](https://github.com/samhitapn/sWGS-HRD/assets/26872279/26d383a2-3817-4739-923c-c981e56d2336)
-![LOH_Schematic_Description](https://github.com/samhitapn/sWGS-HRD/assets/26872279/93a4bc83-ca7d-450f-ba66-ca4def2979a9)
 # sWGS-HRD
 
 Purpose: Pipeline overview for sWGS – HRD runs
@@ -141,18 +137,22 @@ The above code is also in runHRDAnalysis.sh
 
     hrd_sWGS.job => runJobs_sWGS_CNA_Genotyping.sh => runHRDAnalysis.sh
 
-    
-![Uploading LOH_Schematic.png…]()
+### Flow and Schematic explaining the LOH, LST, and tAI calling
 
-![Uploading LOH_Flow_Functions.png…]()
+#### 1. Calling LOH
+A. Describes the flow of LOH calling along with the necessary functions and scripts involved
+![LOH_Flow_Functions](https://github.com/samhitapn/sWGS-HRD/assets/26872279/7c21baef-2256-43e5-83f8-e939d2af230f)
 
-![Uploading LOH_Schematic_Description.png…]()
+B. Describes 3 different scenarios to illustrate how the LOH merge step is done
+![LOH_Schematic_Description](https://github.com/samhitapn/sWGS-HRD/assets/26872279/a5804359-b7ff-4148-a07c-dd4095871663)
 
-![Uploading LST_Schematic.png…]()
+#### 2. Calling LST and tAI
+A. Describes the flow of CNV calling followed by LST and tAI calculations
+![LST_tAI_Flow_Functions](https://github.com/samhitapn/sWGS-HRD/assets/26872279/3521b745-f31b-4f79-8dd3-297a2c1eab30)
 
-![Uploading LST_tAI_Flow_Functions.png…]()
+B. Describes the schema of how the LSTs and tAIs are called
+![LST_tAI_Schematic](https://github.com/samhitapn/sWGS-HRD/assets/26872279/ad3a961c-c9e6-4ab8-b640-99613c6a436f)
 
-![tAI_Schematic](https://github.com/samhitapn/sWGS-HRD/assets/26872279/1b2ca674-2efb-4601-897c-83e1ee17f499)
 
 
 
