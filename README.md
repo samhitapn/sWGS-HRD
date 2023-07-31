@@ -27,6 +27,7 @@ a) To run directly using in-house softwares, all the above softwares are availab
     
 b) The R version and the necessary pacakges can all be accessed as part of a miniconda environment which can be accessed when required using: 
 
+    module load anaconda/3
     source activate /ifs/data/research/projects/ltg/software/miniconda3/envs/R.3.6.0/
 )
 
@@ -74,7 +75,8 @@ The above job will call the runJobs_sWGS_CNA_Genotyping.sh file which does the f
     
 ### Run the HRD-Analysis
 Once all the above jobs are run and the results are in the desired folders, use the following to run the HRD-Analysis, update the values within <> as per definitions described in the previous sections:
-
+    
+    module load anaconda/3
     source activate /ifs/data/research/projects/ltg/software/miniconda3/envs/R.3.6.0/
 
     cd /ifs/data/research/projects/Samhita/srcFinal/
