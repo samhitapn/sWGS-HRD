@@ -162,7 +162,7 @@ A. Describes the flow of CNV calling followed by LST and tAI calculations
 ![LST_tAI_Flow_Functions](https://github.com/samhitapn/sWGS-HRD/blob/main/LST_tAI_Flow_Functions.png)
 
 B. Describes the schema of how the LSTs and tAIs are called
-![LST_tAI_Schematic](https://github.com/samhitapn/sWGS-HRD/blob/main/LST_tAI_Schematic.png)
+![LST_tAI_Schematic](https://github.com/samhitapn/sWGS-HRD/blob/main/LST_tAI_Schematic_1.png)
 
 ### Details of the various R functions included in the file Functions_HRD.R
 
