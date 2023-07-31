@@ -139,6 +139,14 @@ The above code is also in runHRDAnalysis.sh
 
     hrd_sWGS.job => runJobs_sWGS_CNA_Genotyping.sh => runHRDAnalysis.sh
 
+### HG19 changes
+The above scripts/ descriptions are optimised for hg38. In case of use of hg19, please make the following changes:
+
+    File : runJobs_sWGS_HRD.R
+    Lines :
+        1) #24 (Path to template_ichorCNA.job) => /ifs/data/research/projects/Samhita/srcFinal/template_ichorCNA_hg19.job
+        2) #46 (Path to template_splitChr_mpileup_hg38.job) => /ifs/data/research/projects/Samhita/srcFinal/template_splitChr_mpileup_hg19.job
+
 ### Flow and Schematic explaining the LOH, LST, and tAI calling
 #### 1. Calling LOH
 A. Describes the flow of LOH calling along with the necessary functions and scripts involved
