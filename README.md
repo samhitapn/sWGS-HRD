@@ -203,6 +203,19 @@ B. Describes the schema of how the LSTs and tAIs are called
 | `plotHRDSolutions` | `patTC` | Pathological Tumour Content if provided; default NA | No return value; saves the plots and tabulated results at their respective locations |
 | `plotHRDSolutions` | `lohCalls_bins` | LOH cohort wise bin out data table | No return value; saves the plots and tabulated results at their respective locations |
 | `plotHRDSolutions` | `outDir` | Output directory to store the plots and results | No return value; saves the plots and tabulated results at their respective locations |
+| `getCNVPlot_seg_bin_altSolutions` | `data` | ichorCNA CNA data/ segment data | Return the CNV plot with LOH segments highlighted  |
+| `getCNVPlot_seg_bin_altSolutions` | `cnvBins` | ichorCNA bin wise data | Return the CNV plot with LOH segments highlighted |
+| `getCNVPlot_seg_bin_altSolutions` | `results` | The ichorCNA parametric output | Return the CNV plot with LOH segments highlighted |
+| `getCNVPlot_seg_bin_altSolutions` | `hrdScore` | Data table with sample, number of LSTs, number of tAIs, number of HRD-LOH and total HRD-score (addition of all three) | Return the CNV plot with LOH segments highlighted |
+| `getCNVPlot_seg_bin_altSolutions` | `patTC` | Pathological Tumour Content if provided; default NA | Return the LOH-ratio plot with LOH segments highlighted |
+| `getCNVPlot_seg_bin_altSolutions` | `lohSegData` | LOH cohort wise bin out data table |  Return the LOH-ratio plot with LOH segments highlighted |
+| `getCNVPlot_seg_bin_altSolutions` | `selected` | File mode if it contains the results of selected results of ichorCNA or all |  Return the LOH-ratio plot with LOH segments highlighted |
+| `getRatioPlot` | `data` |  Data Table with per bin details of number of SNPs and the resulting ratios | Return the LOH-ratio plot with LOH segments highlighted  |
+| `getRatioPlot` | `extra` | Any extra information to be added to the title of the plot; default = "" |  Return the LOH-ratio plot with LOH segments highlighted |
+| `getRatioPlot` | `segData` | LOH cohort wise bin out data table  |  Return the LOH-ratio plot with LOH segments highlighted |
+| `getRatioPlot` | `hrdScore` | Data table with sample, number of LSTs, number of tAIs, number of HRD-LOH and total HRD-score (addition of all three) |  Return the LOH-ratio plot with LOH segments highlighted |
+| `getRatioPlot` | `patTC` | Pathological Tumour Content if provided; default NA |  Return the LOH-ratio plot with LOH segments highlighted |
+| `getRatioPlot` | `selected` | File mode if it contains the results of selected results of ichorCNA or all |  Return the LOH-ratio plot with LOH segments highlighted |
 
 
 
