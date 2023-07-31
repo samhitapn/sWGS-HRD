@@ -142,7 +142,7 @@ The above code is also in runHRDAnalysis.sh
 ### Flow and Schematic explaining the LOH, LST, and tAI calling
 #### 1. Calling LOH
 A. Describes the flow of LOH calling along with the necessary functions and scripts involved
-![LOH_Flow_Functions](https://github.com/samhitapn/sWGS-HRD/assets/26872279/7c21baef-2256-43e5-83f8-e939d2af230f)
+![LOH_Flow_Functions](https://github.com/samhitapn/sWGS-HRD/LOH_Flow_Functions.png)
 
 B. Describes 3 different scenarios to illustrate how the LOH merge step is done
 ![LOH_Schematic_Description](https://github.com/samhitapn/sWGS-HRD/assets/26872279/a5804359-b7ff-4148-a07c-dd4095871663)
