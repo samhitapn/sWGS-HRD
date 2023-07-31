@@ -148,6 +148,8 @@ The above scripts/ descriptions are optimised for hg38. In case of use of hg19, 
         2) #46 (Path to template_splitChr_mpileup_hg38.job) => /ifs/data/research/projects/Samhita/srcFinal/template_splitChr_mpileup_hg19.job
 
 ### Flow and Schematic explaining the LOH, LST, and tAI calling
+All the HRD-Score analysis are done on chr 1 to 22
+
 #### 1. Calling LOH
 A. Describes the flow of LOH calling along with the necessary functions and scripts involved
 ![LOH_Flow_Functions](https://github.com/samhitapn/sWGS-HRD/blob/main/LOH_Flow_Functions.png)
