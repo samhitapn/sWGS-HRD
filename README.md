@@ -138,7 +138,6 @@ The above code is also in runHRDAnalysis.sh
     hrd_sWGS.job => runJobs_sWGS_CNA_Genotyping.sh => runHRDAnalysis.sh
 
 ### Flow and Schematic explaining the LOH, LST, and tAI calling
-
 #### 1. Calling LOH
 A. Describes the flow of LOH calling along with the necessary functions and scripts involved
 ![LOH_Flow_Functions](https://github.com/samhitapn/sWGS-HRD/assets/26872279/7c21baef-2256-43e5-83f8-e939d2af230f)
@@ -152,6 +151,58 @@ A. Describes the flow of CNV calling followed by LST and tAI calculations
 
 B. Describes the schema of how the LSTs and tAIs are called
 ![LST_tAI_Schematic](https://github.com/samhitapn/sWGS-HRD/assets/26872279/ad3a961c-c9e6-4ab8-b640-99613c6a436f)
+
+### Details of the various R functions included in the file Functions_HRD.R
+
+| Function Name  | Input Params | Description | Return Value |
+| ------------- | ------------- | ------------- | ------------- |
+| `getFiles`  | `fileList` | List of all the files from which to filter the neceesary files based on the sample name | Selected list of files |
+| `getFiles`  | `sample` | Sample Name whose files need to be filtered | Selected list of files | 
+| `getSNPData`  | `fileList` | List of all the files from which to filter the neceesary files based on the sample name | Resulting SNP data extracted from the genotyped files, with the ALT_VAF |
+| `getSNPData`  | `sample` | Sample Name whose files need to be filtered | Resulting SNP data extracted from the genotyped files, with the ALT_VAF |
+| `getRatios` | `data` | SNP Data | Data Table with per bin details of number of SNPs and the resulting ratios |
+| `getRatios` | `x` | Bin Definitions | Data Table with per bin details of number of SNPs and the resulting ratios |
+| `getRatios` | `s` | VAF lower limit between which the selected SNPs need to be counted | Data Table with per bin details of number of SNPs and the resulting ratios |
+| `getRatios` | `s` | VAF lower limit between which the selected SNPs need to be counted | Data Table with per bin details of number of SNPs and the resulting ratios |
+| `getLogCohort_ratio` | `ratios` | The ratios data as resulted from the getRatios function for the whole cohort, including the reference cohort | Data table with cohort wise ratio calculations |
+| `getLOHColumns` | `data` | The cohort wise calculated data as resulted from getLogCohort_ratio function | Data table with cohort wise ratio calculations and the individual bins marked as LOH or Non-LOH |
+| `getMergedGroups` | `data` | Ratio data marked with cohort wise metrics and the bin-wise LOH status | Data table with individual bins merged to call LOH segments |
+| `getCummulativeCounts` | `data` | The merged data table with LOH segment calls | Number of HRD-LOH present in the sample |
+| `getCummulativeCounts` | `limit` | Lower limit defined for the HRD-LOH definition; default = 15 | Data table with sample and number of HRD-LOH |
+| `getLST` | `data` | ichorCNA bin wise output data with columns (sample, chr, start, end and copy number); excluding X chromosome | Data table with sample and number of LSTs |
+| `gettAI` | `data` | ichorCNA segment wise output data with columns (sample, chr, start, end and copy number); excluding X chromosome | Data table with sample and number of tAIs |
+| `getHRDScore` | `bins` | ichorCNA bin wise data | Data table with sample, number of LSTs, number of tAIs, number of HRD-LOH and total HRD-score (addition of all three) |
+| `getHRDScore` | `cna` | ichorCNA segment wise data | Data table with sample, number of LSTs, number of tAIs, number of HRD-LOH and total HRD-score (addition of all three) |
+| `getHRDScore` | `hrdLOH` | Data table with sample and number of HRD-LOH | Data table with sample, number of LSTs, number of tAIs, number of HRD-LOH and total HRD-score (addition of all three) |
+| `getHRDScore` | `sample` | Sample name | Data table with sample, number of LSTs, number of tAIs, number of HRD-LOH and total HRD-score (addition of all three) |
+| `getSelectedSol_HRDPlots` | `rData` | Respective .RData file from the ichorCNA output | Returns the CNV plot with LOH segments highlighted |
+| `getSelectedSol_HRDPlots` | `sName` | Sample name | Returns the CNV plot with LOH segments highlighted |
+| `getSelectedSol_HRDPlots` | `mergedLOH` | Data table with LOH segment calls | Returns the CNV plot with LOH segments highlighted |
+| `getSelectedSol_HRDPlots` | `hrdLOH` | Data table with sample and number of HRD-LOH | Returns the CNV plot with LOH segments highlighted |
+| `getSelectedSol_HRDPlots` | `patTC` | Pathological Tumour Content if provided; default NA | Returns the CNV plot with LOH segments highlighted |
+| `getSelectedSol_HRDPlots` | `mode` | ichorCNA ploidy run mode. One of [c(2),c(3),c(4),c(2,3,4)] | Returns the CNV plot with LOH segments highlighted |
+| `getSelectedSol_HRDPlots` | `resDir` | Output directory to store the tabulated results | Returns the CNV plot with LOH segments highlighted |
+| `getAllSol_HRDPlots` | `rData` | Respective .RData file from the ichorCNA output | Returns the CNV plot with LOH segments highlighted |
+| `getAllSol_HRDPlots` | `sName` | Sample name | Returns the CNV plot with LOH segments highlighted |
+| `getAllSol_HRDPlots` | `mergedLOH` | Data table with LOH segment calls | Returns the CNV plot with LOH segments highlighted |
+| `getAllSol_HRDPlots` | `hrdLOH` | Data table with sample and number of HRD-LOH | Returns the CNV plot with LOH segments highlighted |
+| `getAllSol_HRDPlots` | `patTC` | Pathological Tumour Content if provided; default NA | Returns the CNV plot with LOH segments highlighted |
+| `getAllSol_HRDPlots` | `resDir` | Output directory to store the tabulated results | Returns the CNV plot with LOH segments highlighted |
+| `writeHRDResults` | `sName` | Sample name | Writes the output to a file (selected solution or all solutions): includes HRD and ichorCNA metrics |
+| `writeHRDResults` | `results` | ichorCNA run output parameters | Writes the output to a file (selected solution or all solutions): includes HRD and ichorCNA metrics |
+| `writeHRDResults` | `hrdScore` | Data table with sample, number of LSTs, number of tAIs, number of HRD-LOH and total HRD-score (addition of all three) | Writes the output to a file (selected solution or all solutions): includes HRD and ichorCNA metrics |
+| `writeHRDResults` | `patTC` | Pathological Tumour Content if provided; default NA | Writes the output to a file (selected solution or all solutions): includes HRD and ichorCNA metrics |
+| `writeHRDResults` | `mode` | ichorCNA ploidy run mode. One of [c(2),c(3),c(4),c(2,3,4)]; Default = NA | Writes the output to a file (selected solution or all solutions): includes HRD and ichorCNA metrics |
+| `writeHRDResults` | `selected` | File mode if it contains the results of selected results of ichorCNA or all; default = "All" | Writes the output to a file (selected solution or all solutions): includes HRD and ichorCNA metrics |
+| `writeHRDResults` | `outDir` | Output directory to store the tabulated results | Writes the output to a file (selected solution or all solutions): includes HRD and ichorCNA metrics |
+| `plotHRDSolutions` | `sample` | Sample name | No return value; saves the plots and tabulated results at their respective locations |
+| `plotHRDSolutions` | `rDataFileList_all` | List of all RData files in the cohort run at the initial ploidy mode : c(2,3,4) | No return value; saves the plots and tabulated results at their respective locations |
+| `plotHRDSolutions` | `rDataFileList_2` | List of all RData files in the cohort run at the initial ploidy mode : c(2) | No return value; saves the plots and tabulated results at their respective locations |
+| `plotHRDSolutions` | `rDataFileList_3` | List of all RData files in the cohort run at the initial ploidy mode : c(3) | No return value; saves the plots and tabulated results at their respective locations |
+| `plotHRDSolutions` | `rDataFileList_4` | List of all RData files in the cohort run at the initial ploidy mode : c(4) | No return value; saves the plots and tabulated results at their respective locations |
+| `plotHRDSolutions` | `patTC` | Pathological Tumour Content if provided; default NA | No return value; saves the plots and tabulated results at their respective locations |
+| `plotHRDSolutions` | `lohCalls_bins` | LOH cohort wise bin out data table | No return value; saves the plots and tabulated results at their respective locations |
+| `plotHRDSolutions` | `outDir` | Output directory to store the plots and results | No return value; saves the plots and tabulated results at their respective locations |
 
 
 
