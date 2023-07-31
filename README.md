@@ -145,14 +145,14 @@ A. Describes the flow of LOH calling along with the necessary functions and scri
 ![LOH_Flow_Functions](https://github.com/samhitapn/sWGS-HRD/blob/main/LOH_Flow_Functions.png)
 
 B. Describes 3 different scenarios to illustrate how the LOH merge step is done
-![LOH_Schematic_Description](https://github.com/samhitapn/sWGS-HRD/assets/26872279/a5804359-b7ff-4148-a07c-dd4095871663)
+![LOH_Schematic_Description](https://github.com/samhitapn/sWGS-HRD/blob/main/LOH_Schematic_Description.png)
 
 #### 2. Calling LST and tAI
 A. Describes the flow of CNV calling followed by LST and tAI calculations
-![LST_tAI_Flow_Functions](https://github.com/samhitapn/sWGS-HRD/assets/26872279/3521b745-f31b-4f79-8dd3-297a2c1eab30)
+![LST_tAI_Flow_Functions](https://github.com/samhitapn/sWGS-HRD/blob/main/LST_tAI_Flow_Functions.png)
 
 B. Describes the schema of how the LSTs and tAIs are called
-![LST_tAI_Schematic](https://github.com/samhitapn/sWGS-HRD/assets/26872279/ad3a961c-c9e6-4ab8-b640-99613c6a436f)
+![LST_tAI_Schematic](https://github.com/samhitapn/sWGS-HRD/blob/main/LST_tAI_Schematic.png)
 
 ### Details of the various R functions included in the file Functions_HRD.R
 
