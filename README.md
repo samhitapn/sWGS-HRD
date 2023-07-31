@@ -1,3 +1,7 @@
+![tAI_Schematic](https://github.com/samhitapn/sWGS-HRD/assets/26872279/a2e7f878-b210-40b7-977e-15cd91fcfe0c)
+![LST_tAI_Flow_Functions](https://github.com/samhitapn/sWGS-HRD/assets/26872279/b7ecee0d-66ac-4f3b-ab75-342f8dbd1cf9)
+![LST_Schematic](https://github.com/samhitapn/sWGS-HRD/assets/26872279/26d383a2-3817-4739-923c-c981e56d2336)
+![LOH_Schematic_Description](https://github.com/samhitapn/sWGS-HRD/assets/26872279/93a4bc83-ca7d-450f-ba66-ca4def2979a9)
 # sWGS-HRD
 
 Purpose: Pipeline overview for sWGS – HRD runs
@@ -136,3 +140,22 @@ The above code is also in runHRDAnalysis.sh
 ### Script file flow
 
     hrd_sWGS.job => runJobs_sWGS_CNA_Genotyping.sh => runHRDAnalysis.sh
+
+    
+![Uploading LOH_Schematic.png…]()
+
+![Uploading LOH_Flow_Functions.png…]()
+
+![Uploading LOH_Schematic_Description.png…]()
+
+![Uploading LST_Schematic.png…]()
+
+![Uploading LST_tAI_Flow_Functions.png…]()
+
+![tAI_Schematic](https://github.com/samhitapn/sWGS-HRD/assets/26872279/1b2ca674-2efb-4601-897c-83e1ee17f499)
+
+
+
+
+
+
