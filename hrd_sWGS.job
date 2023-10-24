@@ -1,0 +1,15 @@
+#!/bin/bash
+#BATCH -J hrd_sWGS
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem-per-cpu=16100M
+#SBATCH --output=hrd_sWGS.out
+#SBATCH --error=hrd_sWGS.err
+#SBATCH --partition=res-prio
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=samhita.pamidimarrinaga@radboudumc.nl
+
+cd /ifs/data/research/projects/Samhita/srcFinal/
+
+#./runHRDPipeline.sh  /ifs/data/research/projects/Samhita/ SnezanaCohort "/ifs/data/research/projects/Samhita/bamPath.txt" "/ifs/data/research/projects/Samhita/sampleList.txt"
+./runJobs_sWGS_CNA_Genotyping.sh  <OUTPUT_DIRECTORY> <COHORT_NAME> <BAMPATHs_FILE> <SAMPLE LIST>
